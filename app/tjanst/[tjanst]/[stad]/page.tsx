@@ -1,0 +1,143 @@
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import Link from 'next/link'
+import { ArrowLeft } from 'lucide-react'
+import {
+  getAllServices,
+  getServiceBySlug,
+  getAllCities,
+  getCityBySlug,
+  getProfessionalsByCityAndService,
+} from '@/lib/data'
+import { ProfessionalCard } from '@/components/professional-card'
+import { MapView } from '@/components/map-view'
+import { JsonLd } from '@/components/json-ld'
+
+interface Props {
+  params: { tjanst: string; stad: string }
+}
+
+export async function generateStaticParams() {
+  const [services, cities] = await Promise.all([getAllServices(), getAllCities()])
+  return services.flatMap((s) => cities.map((c) => ({ tjanst: s.slug, stad: c.slug })))
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const [service, city] = await Promise.all([
+    getServiceBySlug(params.tjanst),
+    getCityBySlug(params.stad),
+  ])
+  if (!service || !city) return { title: 'Sidan hittades inte' }
+  return {
+    title: `${service.name} i ${city.name}`,
+    description: `Hitta ${service.name.toLowerCase()}-specialister i ${city.name}. Jämför vårdgivare och boka tid.`,
+    openGraph: {
+      title: `${service.name} i ${city.name} | Doktorkollen`,
+      description: `Hitta ${service.name.toLowerCase()} i ${city.name}.`,
+    },
+  }
+}
+
+export default async function TjanstStadPage({ params }: Props) {
+  const [service, city, professionals] = await Promise.all([
+    getServiceBySlug(params.tjanst),
+    getCityBySlug(params.stad),
+    getProfessionalsByCityAndService(params.stad, params.tjanst),
+  ])
+
+  if (!service || !city) notFound()
+
+  const markers = professionals.map((p) => ({
+    id: p.id,
+    name: p.name,
+    lat: p.lat,
+    lng: p.lng,
+    url: `/vardgivare/${p.slug}`,
+    subtitle: p.title,
+  }))
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `${service.name} i ${city.name}`,
+    description: `Specialister inom ${service.name.toLowerCase()} i ${city.name}`,
+    numberOfItems: professionals.length,
+    itemListElement: professionals.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: p.name,
+      url: `https://doktorkollen.com/vardgivare/${p.slug}`,
+    })),
+  }
+
+  return (
+    <>
+      <JsonLd data={jsonLd} />
+      <div className="container mx-auto px-4 sm:px-6 py-10 animate-fade-in">
+        {/* Breadcrumb */}
+        <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
+          <Link href="/tjanst" className="hover:text-brand transition-colors">
+            Tjänster
+          </Link>
+          <span>/</span>
+          <Link href={`/tjanst/${service.slug}`} className="hover:text-brand transition-colors">
+            {service.name}
+          </Link>
+          <span>/</span>
+          <span className="text-foreground">{city.name}</span>
+        </nav>
+
+        {/* Header */}
+        <div className="mb-10">
+          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            {service.name} i {city.name}
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-2xl">
+            Hitta legitimerade specialister inom {service.name.toLowerCase()} i {city.name}.
+            Vi listar {professionals.length} vårdgivare i området.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Professionals */}
+          <div className="lg:col-span-2">
+            <h2 className="text-xl font-semibold text-foreground mb-5">
+              Vårdgivare ({professionals.length})
+            </h2>
+            {professionals.length === 0 ? (
+              <div className="text-center py-12 border border-dashed border-border rounded-lg">
+                <p className="text-muted-foreground">
+                  Inga vårdgivare hittades för {service.name.toLowerCase()} i {city.name}.
+                </p>
+                <Link
+                  href={`/tjanst/${service.slug}`}
+                  className="mt-3 inline-flex items-center gap-1 text-sm text-brand hover:underline"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  Se alla {service.name.toLowerCase()}-specialister
+                </Link>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {professionals.map((pro) => (
+                  <ProfessionalCard key={pro.id} professional={pro} />
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Map */}
+          <div className="lg:col-span-1">
+            <h2 className="text-xl font-semibold text-foreground mb-5">Karta</h2>
+            <MapView
+              markers={markers}
+              center={[city.lat, city.lng]}
+              zoom={12}
+              className="w-full h-80 rounded-lg overflow-hidden border border-border"
+            />
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
