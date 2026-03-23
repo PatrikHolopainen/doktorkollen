@@ -17,10 +17,8 @@ interface Props {
   params: { tjanst: string; stad: string }
 }
 
-export async function generateStaticParams() {
-  const [services, cities] = await Promise.all([getAllServices(), getAllCities()])
-  return services.flatMap((s) => cities.map((c) => ({ tjanst: s.slug, stad: c.slug })))
-}
+// Render on demand — service × city combos are long-tail, no need to pre-render all
+export const dynamic = 'force-dynamic'
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const [service, city] = await Promise.all([

@@ -17,10 +17,8 @@ interface Props {
   params: { tillstand: string; stad: string }
 }
 
-export async function generateStaticParams() {
-  const [conditions, cities] = await Promise.all([getAllConditions(), getAllCities()])
-  return conditions.flatMap((c) => cities.map((city) => ({ tillstand: c.slug, stad: city.slug })))
-}
+// Render on demand — too many combos to pre-render (conditions × cities)
+export const dynamic = 'force-dynamic'
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const [condition, city] = await Promise.all([
