@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://doktorkollen.com'),
+  verification: {
+    google: '1MbLJnb05TT2f5h2j1h9oCZqiPR0Iob4c3hAgRwnKO4',
+  },
   title: {
     default: 'Doktorkollen – Hitta rätt vårdgivare i Sverige',
     template: '%s | Doktorkollen',
