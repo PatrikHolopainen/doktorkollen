@@ -20,7 +20,11 @@ interface Props {
 
 export async function generateStaticParams() {
   const clinics = await getAllClinics()
-  return clinics.map((c) => ({ klinik: c.slug }))
+  // Pre-render only clinics with real coordinates; the rest render on-demand
+  return clinics
+    .filter((c) => c.lat !== 0 && c.lng !== 0)
+    .slice(0, 2000)
+    .map((c) => ({ klinik: c.slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

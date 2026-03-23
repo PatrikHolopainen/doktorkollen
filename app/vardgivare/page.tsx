@@ -3,6 +3,8 @@ import { getAllProfessionals, getAllCities } from '@/lib/data'
 import { ProfessionalsFilter } from '@/components/professionals-filter'
 import { JsonLd } from '@/components/json-ld'
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Vårdgivare',
   description:

@@ -3,6 +3,8 @@ import { getAllClinics, getAllCities } from '@/lib/data'
 import { ClinicsFilter } from '@/components/clinics-filter'
 import { JsonLd } from '@/components/json-ld'
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Kliniker',
   description:
@@ -22,7 +24,7 @@ export default async function KlinikPage() {
     name: 'Kliniker',
     description: 'Lista över kliniker på Doktorkollen',
     numberOfItems: clinics.length,
-    itemListElement: clinics.map((c, i) => ({
+    itemListElement: clinics.slice(0, 100).map((c, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: c.name,
