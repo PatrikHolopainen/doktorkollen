@@ -42,16 +42,9 @@ export default async function KlinikProfilePage({ params }: Props) {
 
   const professionals = await getProfessionalsForClinic(clinic)
 
-  const markers = [
-    {
-      id: clinic.id,
-      name: clinic.name,
-      lat: clinic.lat,
-      lng: clinic.lng,
-      url: `/klinik/${clinic.slug}`,
-      subtitle: `${clinic.address}, ${clinic.city}`,
-    },
-  ]
+  const markers = clinic.lat !== 0 && clinic.lng !== 0
+    ? [{ id: clinic.id, name: clinic.name, lat: clinic.lat, lng: clinic.lng, url: `/klinik/${clinic.slug}`, subtitle: `${clinic.address}, ${clinic.city}` }]
+    : []
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -189,25 +182,26 @@ export default async function KlinikProfilePage({ params }: Props) {
           {/* Sidebar */}
           <div className="space-y-6">
             {/* Map */}
-            <div>
-              <h2 className="text-lg font-semibold text-foreground mb-3">Hitta hit</h2>
-              <MapView
-                markers={markers}
-                center={[clinic.lat, clinic.lng]}
-                zoom={14}
-                className="w-full h-64 rounded-lg overflow-hidden border border-border"
-              />
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                  `${clinic.address}, ${clinic.city}`
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 text-sm text-brand hover:underline block"
-              >
-                Öppna i Google Maps →
-              </a>
-            </div>
+            {markers.length > 0 && (
+              <div>
+                <h2 className="text-lg font-semibold text-foreground mb-3">Hitta hit</h2>
+                <MapView
+                  markers={markers}
+                  zoom={14}
+                  className="w-full h-64 rounded-lg overflow-hidden border border-border"
+                />
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                    `${clinic.address}, ${clinic.city}`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 text-sm text-brand hover:underline block"
+                >
+                  Öppna i Google Maps →
+                </a>
+              </div>
+            )}
 
             {/* Contact */}
             <div className="bg-brand-light border border-brand/20 rounded-xl p-5">

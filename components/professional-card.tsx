@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { MapPin, ArrowRight } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import type { Professional } from '@/lib/types'
 
 interface ProfessionalCardProps {
@@ -25,9 +25,6 @@ export function ProfessionalCard({ professional }: ProfessionalCardProps) {
         <CardContent className="p-5">
           <div className="flex items-start gap-4">
             <Avatar className="h-14 w-14 shrink-0">
-              {professional.imageUrl && (
-                <AvatarImage src={professional.imageUrl} alt={professional.name} />
-              )}
               <AvatarFallback className="text-base">
                 {getInitials(professional.name)}
               </AvatarFallback>

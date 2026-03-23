@@ -47,14 +47,16 @@ export default async function TjanstStadPage({ params }: Props) {
 
   if (!service || !city) notFound()
 
-  const markers = professionals.map((p) => ({
-    id: p.id,
-    name: p.name,
-    lat: p.lat,
-    lng: p.lng,
-    url: `/vardgivare/${p.slug}`,
-    subtitle: p.title,
-  }))
+  const markers = professionals
+    .filter((p) => p.lat !== 0 && p.lng !== 0)
+    .map((p) => ({
+      id: p.id,
+      name: p.name,
+      lat: p.lat,
+      lng: p.lng,
+      url: `/vardgivare/${p.slug}`,
+      subtitle: p.title,
+    }))
 
   const jsonLd = {
     '@context': 'https://schema.org',

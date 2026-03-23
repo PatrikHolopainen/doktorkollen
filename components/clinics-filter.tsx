@@ -27,14 +27,16 @@ export function ClinicsFilter({ clinics, cities }: ClinicsFilterProps) {
     return matchesQuery && matchesCity
   })
 
-  const markers: MapMarker[] = filtered.map((c) => ({
-    id: c.id,
-    name: c.name,
-    lat: c.lat,
-    lng: c.lng,
-    url: `/klinik/${c.slug}`,
-    subtitle: `${c.address}, ${c.city}`,
-  }))
+  const markers: MapMarker[] = filtered
+    .filter((c) => c.lat !== 0 && c.lng !== 0)
+    .map((c) => ({
+      id: c.id,
+      name: c.name,
+      lat: c.lat,
+      lng: c.lng,
+      url: `/klinik/${c.slug}`,
+      subtitle: `${c.address}, ${c.city}`,
+    }))
 
   return (
     <div>

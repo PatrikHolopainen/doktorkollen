@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
+import { getAllServices, getAllConditions } from '@/lib/data'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -49,11 +50,16 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const [services, conditions] = await Promise.all([getAllServices(), getAllConditions()])
+
+  const navServices = services.map((s) => ({ slug: s.slug, name: s.name }))
+  const navConditions = conditions.slice(0, 40).map((c) => ({ slug: c.slug, name: c.name }))
+
   return (
     <html lang="sv" className={inter.className}>
       <body className="min-h-screen flex flex-col bg-background text-foreground antialiased">
-        <Navbar />
+        <Navbar services={navServices} conditions={navConditions} />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

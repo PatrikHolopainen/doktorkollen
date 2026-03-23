@@ -9,7 +9,7 @@ import {
   getClinicsForProfessional,
   getAllConditions,
 } from '@/lib/data'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
@@ -60,7 +60,7 @@ export default async function VardgivareProfilePage({ params }: Props) {
   ])
 
   const proConditions = allConditions.filter((c) =>
-    professional.conditionIds.includes(c.id)
+    c.id ? professional.conditionIds.includes(c.id) : false
   )
 
   const nearbyMarkers = [
@@ -80,7 +80,7 @@ export default async function VardgivareProfilePage({ params }: Props) {
       url: `/vardgivare/${r.slug}`,
       subtitle: r.title,
     })),
-  ]
+  ].filter((m) => m.lat !== 0 && m.lng !== 0)
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -114,9 +114,6 @@ export default async function VardgivareProfilePage({ params }: Props) {
         <div className="bg-white rounded-2xl border border-border p-6 sm:p-8 mb-8">
           <div className="flex flex-col sm:flex-row gap-6">
             <Avatar className="h-24 w-24 text-2xl">
-              {professional.imageUrl && (
-                <AvatarImage src={professional.imageUrl} alt={professional.name} />
-              )}
               <AvatarFallback className="text-2xl">
                 {getInitials(professional.name)}
               </AvatarFallback>
@@ -220,15 +217,16 @@ export default async function VardgivareProfilePage({ params }: Props) {
           {/* Sidebar */}
           <div className="space-y-6">
             {/* Map */}
-            <div>
-              <h2 className="text-lg font-semibold text-foreground mb-3">Plats</h2>
-              <MapView
-                markers={nearbyMarkers}
-                center={[professional.lat, professional.lng]}
-                zoom={13}
-                className="w-full h-64 rounded-lg overflow-hidden border border-border"
-              />
-            </div>
+            {nearbyMarkers.length > 0 && (
+              <div>
+                <h2 className="text-lg font-semibold text-foreground mb-3">Plats</h2>
+                <MapView
+                  markers={nearbyMarkers}
+                  zoom={13}
+                  className="w-full h-64 rounded-lg overflow-hidden border border-border"
+                />
+              </div>
+            )}
 
             {/* Booking CTA */}
             <div className="bg-brand-light border border-brand/20 rounded-xl p-5">

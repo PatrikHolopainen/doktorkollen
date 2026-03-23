@@ -32,3 +32,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# scraped data — keep production files, exclude scraper intermediates
+/data/1177-listings.json
+/data/1177-conditions-raw.json
+/data/1177-conditions-urls.json
+/data/1177-conditions-progress.json
+/data/1177-progress.json
+/data/conditions-enrich-progress.json
+/data/aleris-clinics.json
+/data/aleris-progress.json
+/data/mobiladoktorn-doctors.json
+/data/search-index.json
+
+# scripts secrets
+/scripts/.env

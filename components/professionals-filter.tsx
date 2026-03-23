@@ -27,14 +27,16 @@ export function ProfessionalsFilter({ professionals, cities }: ProfessionalsFilt
     return matchesQuery && matchesCity
   })
 
-  const markers: MapMarker[] = filtered.map((p) => ({
-    id: p.id,
-    name: p.name,
-    lat: p.lat,
-    lng: p.lng,
-    url: `/vardgivare/${p.slug}`,
-    subtitle: p.title,
-  }))
+  const markers: MapMarker[] = filtered
+    .filter((p) => p.lat !== 0 && p.lng !== 0)
+    .map((p) => ({
+      id: p.id,
+      name: p.name,
+      lat: p.lat,
+      lng: p.lng,
+      url: `/vardgivare/${p.slug}`,
+      subtitle: p.title,
+    }))
 
   return (
     <div>

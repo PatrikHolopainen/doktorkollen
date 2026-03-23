@@ -9,15 +9,22 @@ export interface Service {
 }
 
 export interface Condition {
-  id: string
+  id?: string
   slug: string
   name: string
   description: string
   symptoms: string[]
-  treatments: string[]
-  whenToVisit: string
-  faq: { question: string; answer: string }[]
-  relatedServices: string[]
+  treatments?: string[]
+  whenToVisit?: string       // legacy mock-data field
+  whenToSeekCare?: string    // from 1177 enriched data
+  faq?: { question: string; answer: string }[]
+  relatedServices?: string[]
+  specialties?: string[]     // medical specialties that treat this condition
+  category?: string          // 1177 URL category e.g. "psykisk-halsa"
+  subcategory?: string
+  source?: string            // e.g. "1177.se"
+  sourceUrl?: string
+  lastModified?: string
 }
 
 export interface Professional {

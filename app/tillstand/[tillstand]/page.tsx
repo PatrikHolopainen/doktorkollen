@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { CheckCircle, AlertTriangle, ArrowRight, MapPin } from 'lucide-react'
+import { CheckCircle, AlertTriangle, ArrowRight, MapPin, ExternalLink, Stethoscope } from 'lucide-react'
 import {
   getAllConditions,
   getConditionBySlug,
@@ -47,6 +47,8 @@ export default async function TillstandDetailPage({ params }: Props) {
     professionals.some((p) => p.citySlug === city.slug)
   )
 
+  const whenToSeek = condition.whenToSeekCare ?? condition.whenToVisit ?? null
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'MedicalCondition',
@@ -57,10 +59,12 @@ export default async function TillstandDetailPage({ params }: Props) {
       '@type': 'MedicalSymptom',
       name: s,
     })),
-    possibleTreatment: condition.treatments.map((t) => ({
-      '@type': 'MedicalTherapy',
-      name: t,
-    })),
+    ...(condition.treatments?.length ? {
+      possibleTreatment: condition.treatments.map((t) => ({
+        '@type': 'MedicalTherapy',
+        name: t,
+      })),
+    } : {}),
   }
 
   return (
@@ -100,35 +104,39 @@ export default async function TillstandDetailPage({ params }: Props) {
             </section>
 
             {/* Treatments */}
-            <section>
-              <h2 className="text-2xl font-bold text-foreground mb-5">Behandlingsalternativ</h2>
-              <ul className="space-y-2">
-                {condition.treatments.map((treatment) => (
-                  <li key={treatment} className="flex items-start gap-3">
-                    <div className="h-2 w-2 rounded-full bg-brand shrink-0 mt-2" />
-                    <span className="text-foreground">{treatment}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
+            {condition.treatments && condition.treatments.length > 0 && (
+              <section>
+                <h2 className="text-2xl font-bold text-foreground mb-5">Behandlingsalternativ</h2>
+                <ul className="space-y-2">
+                  {condition.treatments.map((treatment) => (
+                    <li key={treatment} className="flex items-start gap-3">
+                      <div className="h-2 w-2 rounded-full bg-brand shrink-0 mt-2" />
+                      <span className="text-foreground">{treatment}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
             {/* When to visit */}
-            <section>
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
-                <div className="flex items-start gap-3">
-                  <AlertTriangle className="h-6 w-6 text-amber-500 shrink-0 mt-0.5" />
-                  <div>
-                    <h2 className="text-lg font-semibold text-foreground mb-2">
-                      När ska du söka vård?
-                    </h2>
-                    <p className="text-foreground">{condition.whenToVisit}</p>
+            {whenToSeek && (
+              <section>
+                <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
+                  <div className="flex items-start gap-3">
+                    <AlertTriangle className="h-6 w-6 text-amber-500 shrink-0 mt-0.5" />
+                    <div>
+                      <h2 className="text-lg font-semibold text-foreground mb-2">
+                        När ska du söka vård?
+                      </h2>
+                      <p className="text-foreground">{whenToSeek}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </section>
+              </section>
+            )}
 
             {/* FAQ */}
-            {condition.faq.length > 0 && (
+            {condition.faq && condition.faq.length > 0 && (
               <section>
                 <h2 className="text-2xl font-bold text-foreground mb-5">
                   Vanliga frågor
@@ -171,7 +179,7 @@ export default async function TillstandDetailPage({ params }: Props) {
                 </div>
                 <div>
                   <dt className="text-xs text-muted-foreground uppercase tracking-wide">Behandlingar</dt>
-                  <dd className="mt-1 text-sm text-foreground">{condition.treatments.length} behandlingsalternativ</dd>
+                  <dd className="mt-1 text-sm text-foreground">{condition.treatments?.length ?? 0} behandlingsalternativ</dd>
                 </div>
                 <div>
                   <dt className="text-xs text-muted-foreground uppercase tracking-wide">Specialister</dt>
@@ -201,6 +209,44 @@ export default async function TillstandDetailPage({ params }: Props) {
                     </Link>
                   ))}
                 </div>
+              </div>
+            )}
+
+            {/* Specialties */}
+            {condition.specialties && condition.specialties.length > 0 && (
+              <div className="border border-border rounded-xl p-5 bg-white">
+                <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2">
+                  <Stethoscope className="h-4 w-4 text-brand" />
+                  Behandlande specialiteter
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {condition.specialties.map((spec) => (
+                    <Badge key={spec} variant="secondary" className="text-xs">
+                      {spec}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Source */}
+            {condition.source && condition.sourceUrl && (
+              <div className="border border-border rounded-xl p-4 bg-white">
+                <p className="text-xs text-muted-foreground mb-2">Källa</p>
+                <a
+                  href={condition.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-sm text-brand hover:underline"
+                >
+                  {condition.source}
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+                {condition.lastModified && (
+                  <p className="text-xs text-muted-foreground mt-1">
+                    Uppdaterad: {new Date(condition.lastModified).toLocaleDateString('sv-SE')}
+                  </p>
+                )}
               </div>
             )}
 
