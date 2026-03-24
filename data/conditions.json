@@ -33,73 +33,9 @@
     "enrichedAt": "2026-03-23T10:47:31.633Z"
   },
   {
-    "slug": "ar-det-farligt-att-anvanda-lustgas-for-att-bli-berusad",
-    "url": "https://www.1177.se/sjukdomar--besvar/beroende-och-skadligt-bruk/ar-det-farligt-att-anvanda-lustgas-for-att-bli-berusad/",
-    "title": "Är det farligt att använda lustgas för att bli berusad?",
-    "category": "beroende-och-skadligt-bruk",
-    "subcategory": "ar-det-farligt-att-anvanda-lustgas-for-att-bli-berusad",
-    "description": "Användning av lustgas för att bli berusad kan leda till allvarliga hälsoproblem, trots att gasen ibland betraktas som ofarlig. Vid missbruk kan det orsaka nervskador och syrebrist, vilket kan vara livshotande i vissa fall. Det är viktigt att vara medveten om riskerna och att söka vård om man mår dåligt efter användning.",
-    "symptoms": [
-      "nervskador",
-      "yrsel",
-      "andeproblem",
-      "svårigheter att svälja",
-      "domenliknande symtom"
-    ],
-    "treatments": [
-      "Sluta använda lustgas",
-      "Läkemedelsbehandling",
-      "Syrgasbehandling"
-    ],
-    "whenToSeekCare": "Sök vård om du känner dig dålig efter att ha använt lustgas.",
-    "specialties": [
-      "Allmänmedicin",
-      "Psykiatri"
-    ],
-    "ingress": "En del tror att lustgas &#228;r riskfritt f&#246;r att det anv&#228;nds inom sjukv&#229;rden. Men du kan f&#229; allvarliga skador om du anv&#228;nder lustgas f&#246;r att bli berusad.",
-    "source": "1177.se",
-    "sourceUrl": "https://www.1177.se/sjukdomar--besvar/beroende-och-skadligt-bruk/ar-det-farligt-att-anvanda-lustgas-for-att-bli-berusad/",
-    "authors": [],
-    "lastModified": "2024-09-26T00:00:00+02:00",
-    "enrichedAt": "2026-03-23T10:47:35.507Z"
-  },
-  {
-    "slug": "narstaende-vid-cancer",
-    "url": "https://www.1177.se/sjukdomar--besvar/cancer/narstaende-vid-cancer/",
-    "title": "Närstående vid cancer",
-    "category": "cancer",
-    "subcategory": "narstaende-vid-cancer",
-    "description": "Att vara närstående till en person som har cancer kan vara en mycket svår och känslomässig situation. Det är viktigt att både ge stöd till den som är sjuk och att ta hand om sina egna känslor och behov. Det finns flera resurser och råd tillgängliga för att hjälpa dig hantera denna utmanande tid.",
-    "symptoms": [
-      "oro",
-      "stress",
-      "trötthet",
-      "ångest",
-      "nedstämdhet"
-    ],
-    "treatments": [
-      "Stödgrupp",
-      "Samtalsterapi",
-      "Kontaktsjuksköterska",
-      "Avspänningsövningar"
-    ],
-    "whenToSeekCare": "Sök vård om du känner att din hälsa påverkas negativt av situationen.",
-    "specialties": [
-      "Psykologi",
-      "Psykiatri",
-      "Onkologi"
-    ],
-    "ingress": "Det &#228;r vanligt att vilja st&#246;tta den som har en allvarlig sjukdom samtidigt som du sj&#228;lv har en stark oro och m&#229;r d&#229;ligt. H&#228;r f&#229;r du r&#229;d om hur du kan hantera situationen.",
-    "source": "1177.se",
-    "sourceUrl": "https://www.1177.se/sjukdomar--besvar/cancer/narstaende-vid-cancer/",
-    "authors": [],
-    "lastModified": null,
-    "enrichedAt": "2026-03-23T10:47:39.754Z"
-  },
-  {
     "slug": "tumorer-och-andra-utvaxter",
     "url": "https://www.1177.se/sjukdomar--besvar/cancer/fakta-om-cancer/tumorer-och-andra-utvaxter/",
-    "title": "Tumörer och andra utväxter",
+    "title": "Tumörer",
     "category": "cancer",
     "subcategory": "fakta-om-cancer",
     "description": "Tumörer och utväxter är abnormaliteter som uppstår när celler i kroppen börjar växa okontrollerat. Många av dessa är godartade och sprider sig inte, vilket innebär att de oftast inte kräver behandling. I vissa fall kan de orsaka problem eller behöver tas bort om de blir för stora eller infekterade.",
@@ -126,35 +62,6 @@
     "authors": [],
     "lastModified": "2024-08-22T00:00:00+02:00",
     "enrichedAt": "2026-03-23T10:47:44.154Z"
-  },
-  {
-    "slug": "film-vara-nara-nagon-som-ar-cancersjuk",
-    "url": "https://www.1177.se/sjukdomar--besvar/cancer/narstaende-vid-cancer/film-vara-nara-nagon-som-ar-cancersjuk/",
-    "title": "Film: Vara nära någon som är cancersjuk",
-    "category": "cancer",
-    "subcategory": "narstaende-vid-cancer",
-    "description": "Att vara nära någon som lider av cancer kan vara en utmanande situation. Det är vanligt att känna sig osäker på hur man bäst kan stödja den sjuke och samtidigt hantera sina egna känslor. Det är viktigt att vara närvarande och lyhörd för både den sjukes och de närståendes behov.",
-    "symptoms": [
-      "oro",
-      "sadness",
-      "stress"
-    ],
-    "treatments": [
-      "Stödgrupper",
-      "Samtalsterapi"
-    ],
-    "whenToSeekCare": "Sök vård om du känner att situationen blir överväldigande.",
-    "specialties": [
-      "Psykologi",
-      "Psykiatri",
-      "Onkologi"
-    ],
-    "ingress": "Sjuksk&#246;terskan Sanna W&#228;rn ber&#228;ttar vilka r&#229;d hon och hennes kolleger brukar ge till n&#228;rst&#229;ende vid cancer.",
-    "source": "1177.se",
-    "sourceUrl": "https://www.1177.se/sjukdomar--besvar/cancer/narstaende-vid-cancer/film-vara-nara-nagon-som-ar-cancersjuk/",
-    "authors": [],
-    "lastModified": "2023-03-23T00:00:00+01:00",
-    "enrichedAt": "2026-03-23T10:47:47.885Z"
   },
   {
     "slug": "diabetes-typ-2",
@@ -191,7 +98,7 @@
   {
     "slug": "ketoacidos",
     "url": "https://www.1177.se/sjukdomar--besvar/diabetes/ketoacidos/",
-    "title": "Ketoacidos vid diabetes",
+    "title": "Ketoacidos",
     "category": "diabetes",
     "subcategory": "ketoacidos",
     "description": "Ketoacidos uppstår när kroppen har brist på insulin, vilket gör att cellerna inte kan ta upp blodsockret och sockerhalten ökar. Detta kan hända vid obehandlad diabetes eller om insulin inte tas som ordinerat. Tillståndet kan vara livshotande och kräver omgående vård.",
@@ -223,7 +130,7 @@
   {
     "slug": "insulinkanning",
     "url": "https://www.1177.se/sjukdomar--besvar/diabetes/insulinkanning/",
-    "title": "Insulinkänning vid diabetes",
+    "title": "Insulinkänning",
     "category": "diabetes",
     "subcategory": "insulinkanning",
     "description": "Insulinkänning vid diabetes inträffar när blodsockernivån sjunker för mycket eller för snabbt. Vanliga tecken är svettningar, darrningar, hjärtklappning och oro. Det är avgörande att snabbt återställa blodsockret vid en insulinkänning för att undvika allvarliga komplikationer.",
@@ -255,7 +162,7 @@
   {
     "slug": "nar-barn-och-unga-far-diabetes-typ-1",
     "url": "https://www.1177.se/sjukdomar--besvar/diabetes/nar-barn-och-unga-far-diabetes-typ-1/",
-    "title": "När barn och unga får diabetes typ 1",
+    "title": "Diabetes typ 1 hos barn och unga",
     "category": "diabetes",
     "subcategory": "nar-barn-och-unga-far-diabetes-typ-1",
     "description": "Diabetes typ 1 hos barn innebär att de måste anpassa sin livsstil och behandling för att kunna leva som andra barn. Med stöd av ett diabetesteam kan barnet lära sig att hantera sin sjukdom och ta ansvar för sin behandling allteftersom de blir äldre. Insulin är avgörande för att hålla blodsockret på en stabil nivå, och med rätt information och stöd kan barnet delta i aktiviteter som sina jämnåriga.",
@@ -284,41 +191,9 @@
     "enrichedAt": "2026-03-23T10:48:07.391Z"
   },
   {
-    "slug": "behandling-vid-diabetes-typ-1",
-    "url": "https://www.1177.se/sjukdomar--besvar/diabetes/behandling-vid-diabetes-typ-1/",
-    "title": "Behandling vid diabetes typ 1",
-    "category": "diabetes",
-    "subcategory": "behandling-vid-diabetes-typ-1",
-    "description": "Typ 1-diabetes är en livslång sjukdom som kräver kontinuerlig behandling för att hålla blodsockernivåerna i balans. Behandlingen innebär främst att ta insulin och att regelbundet kontrollera blodsockret. Med rätt vård och stöd kan personer med diabetes typ 1 leva ett aktivt och normalt liv.",
-    "symptoms": [
-      "ökad törst",
-      "trötthet",
-      "att gå ner i vikt",
-      "ökad urinproduktion"
-    ],
-    "treatments": [
-      "Insulinbehandling",
-      "Blodsockerkontroll",
-      "Stöd från diabetesteam",
-      "Kostråd"
-    ],
-    "whenToSeekCare": "Sök vård vid försämring av blodsockerkontrollen eller om du har frågor kring behandlingen.",
-    "specialties": [
-      "Diabetesmottagning",
-      "Endokrinologi",
-      "Allmänmedicin"
-    ],
-    "ingress": "Behandlingen av typ 1-diabetes best&#229;r av att kontrollera blodsockret och att ta insulin. Diabetes typ 1 &#228;r en sjukdom som inte g&#229;r &#246;ver och man beh&#246;ver d&#228;rf&#246;r behandling hela livet. Med behandling g&#229;r det att m&#229; bra och leva ett aktivt liv.",
-    "source": "1177.se",
-    "sourceUrl": "https://www.1177.se/sjukdomar--besvar/diabetes/behandling-vid-diabetes-typ-1/",
-    "authors": [],
-    "lastModified": "2024-06-14T12:00:00+02:00",
-    "enrichedAt": "2026-03-23T10:48:12.148Z"
-  },
-  {
     "slug": "neuropsykiatriska-funktionsnedsattningar",
     "url": "https://www.1177.se/sjukdomar--besvar/hjarna-och-nerver/neuropsykiatriska-funktionsnedsattningar/",
-    "title": "Neuropsykiatriska funktionsnedsättningar – npf",
+    "title": "Neuropsykiatriska funktionsnedsättningar (NPF)",
     "category": "hjarna-och-nerver",
     "subcategory": "neuropsykiatriska-funktionsnedsattningar",
     "description": "Neuropsykiatriska funktionsnedsättningar, såsom ADHD och autism, påverkar hur hjärnan fungerar och kan göra det svårt att koncentrera sig, sitta stilla eller hantera impulser. Barn med dessa diagnoser kan också ha tics eller utvecklingssvårigheter som påverkar deras tal och språk. Det finns stöd och hjälp att få för att underlätta vardagen.",
@@ -351,7 +226,7 @@
   {
     "slug": "larande-forstaelse-och-minne",
     "url": "https://www.1177.se/sjukdomar--besvar/hjarna-och-nerver/larande-forstaelse-och-minne/",
-    "title": "Lärande, förståelse och minne",
+    "title": "Inlärningssvårigheter och minnesproblem",
     "category": "hjarna-och-nerver",
     "subcategory": "larande-forstaelse-och-minne",
     "description": "Demens påverkar förmågan att minnas och förstå omvärlden. Alzheimers sjukdom är den mest förekommande typen av demens och symptom som glömska och förvirring utvecklas gradvis. Även tillstånd som dyslexi och dyskalkyli kan påverka lärande och förståelse, men med rätt stöd går det att hantera dessa utmaningar.",
@@ -384,7 +259,7 @@
   {
     "slug": "langvarig-trotthet-och-narkolepsi",
     "url": "https://www.1177.se/sjukdomar--besvar/hjarna-och-nerver/langvarig-trotthet-och-narkolepsi/",
-    "title": "Långvarig trötthet och narkolepsi",
+    "title": "Kronisk trötthet och narkolepsi",
     "category": "hjarna-och-nerver",
     "subcategory": "langvarig-trotthet-och-narkolepsi",
     "description": "Långvarig trötthet, även känd som fatigue, innebär en djup och konstant utmattning som inte går att vila bort. Narkolepsi är en sjukdom som gör att man känner sig mycket sömnig under dagen och kan uppleva plötsliga muskelsvagheter. Det är viktigt att förstå att detta är långvariga tillstånd som kräver tid och rätt hantering.",
@@ -449,7 +324,7 @@
   {
     "slug": "stroke-och-blodkarl-i-hjarnan",
     "url": "https://www.1177.se/sjukdomar--besvar/hjarna-och-nerver/stroke-och-blodkarl-i-hjarnan/",
-    "title": "Stroke och blodkärl i hjärnan",
+    "title": "Stroke",
     "category": "hjarna-och-nerver",
     "subcategory": "stroke-och-blodkarl-i-hjarnan",
     "description": "Stroke innebär att hjärnan drabbas av antingen en blodpropp eller en blödning, vilket leder till syrebrist. Detta kan orsaka plötsliga förluster av förmågor såsom tal, rörelse, känsel och syn. Eftersom stroke kan vara livshotande är det viktigt att snabbt söka vård.",
@@ -477,38 +352,6 @@
     "authors": [],
     "lastModified": null,
     "enrichedAt": "2026-03-23T10:48:38.753Z"
-  },
-  {
-    "slug": "nerver",
-    "url": "https://www.1177.se/sjukdomar--besvar/hjarna-och-nerver/nerver/",
-    "title": "Nerver",
-    "category": "hjarna-och-nerver",
-    "subcategory": "nerver",
-    "description": "Nervsjukdomar påverkar kroppens förmåga att styra musklerna och kan leda till olika symtom beroende på vilken nerv som är påverkad. Vissa tillstånd, som ALS och multipel skleros, är kroniska och kan inte botas, men behandlingar finns för att lindra besvären. Andra tillstånd kan förbättras över tid, till exempel ansiktsförlamning efter en virusinfektion.",
-    "symptoms": [
-      "muskelavbrott",
-      "förlamning",
-      "svårigheter att styra rörelser",
-      "förändrad känsel",
-      "ryckiga rörelser"
-    ],
-    "treatments": [
-      "Läkemedelsbehandling",
-      "Fysioterapi",
-      "Rehabilitering"
-    ],
-    "whenToSeekCare": "Sök vård om du upplever plötsliga förändringar i rörelseförmåga eller känsel.",
-    "specialties": [
-      "Neurologi",
-      "Neurokirurgi",
-      "Fysioterapi"
-    ],
-    "ingress": "H&#228;r kan du l&#228;sa mer om sjukdomar och besv&#228;r som har att g&#246;ra med nerverna.",
-    "source": "1177.se",
-    "sourceUrl": "https://www.1177.se/sjukdomar--besvar/hjarna-och-nerver/nerver/",
-    "authors": [],
-    "lastModified": null,
-    "enrichedAt": "2026-03-23T10:48:43.290Z"
   },
   {
     "slug": "huvudvark-hos-vuxna",
@@ -578,7 +421,7 @@
   {
     "slug": "adhd",
     "url": "https://www.1177.se/sjukdomar--besvar/hjarna-och-nerver/neuropsykiatriska-funktionsnedsattningar/adhd/",
-    "title": "Adhd",
+    "title": "ADHD",
     "category": "hjarna-och-nerver",
     "subcategory": "neuropsykiatriska-funktionsnedsattningar",
     "description": "ADHD är en neuropsykiatrisk funktionsnedsättning som påverkar en persons förmåga att koncentrera sig och kontrollera impulser. Det kan också innebära svårigheter med att sitta stilla och att vara överaktiv. Trots dessa utmaningar finns det stöd och hjälp att få för att underlätta vardagen.",
@@ -705,7 +548,7 @@
   {
     "slug": "hydrocefalus--att-ha-for-mycket-vatska-i-hjarnan",
     "url": "https://www.1177.se/sjukdomar--besvar/hjarna-och-nerver/larande-forstaelse-och-minne/hydrocefalus--att-ha-for-mycket-vatska-i-hjarnan/",
-    "title": "Hydrocefalus – Att ha för mycket vätska i hjärnan",
+    "title": "Hydrocefalus",
     "category": "hjarna-och-nerver",
     "subcategory": "larande-forstaelse-och-minne",
     "description": "Hydrocefalus innebär att det samlas för mycket vätska i hjärnan, vilket kan bero på olika orsaker som sjukdomar eller skador. Symtomen kan variera beroende på orsaken och åldern på den drabbade. Hos äldre personer kan minnesproblem och gångsvårigheter uppstå.",
@@ -799,7 +642,7 @@
   {
     "slug": "hjarnhinneinflammation-och-hjarninflammation",
     "url": "https://www.1177.se/sjukdomar--besvar/hjarna-och-nerver/infektioner-i-hjarna-och-nerver/hjarnhinneinflammation-och-hjarninflammation/",
-    "title": "Hjärnhinneinflammation och hjärninflammation",
+    "title": "Hjärnhinneinflammation (meningit)",
     "category": "hjarna-och-nerver",
     "subcategory": "infektioner-i-hjarna-och-nerver",
     "description": "Hjärnhinneinflammation och hjärninflammation är två liknande sjukdomar som oftast orsakas av virus. Vanliga symtom inkluderar feber, huvudvärk och stel nacke, och tillståndet kan snabbt bli allvarligt, särskilt vid bakteriell infektion.",
@@ -861,7 +704,7 @@
   {
     "slug": "tbe---fastingburen-hjarninflammation",
     "url": "https://www.1177.se/sjukdomar--besvar/hjarna-och-nerver/infektioner-i-hjarna-och-nerver/tbe---fastingburen-hjarninflammation/",
-    "title": "TBE – fästingburen hjärninflammation",
+    "title": "TBE (fästingburen hjärninflammation)",
     "category": "hjarna-och-nerver",
     "subcategory": "infektioner-i-hjarna-och-nerver",
     "description": "TBE är en sjukdom som orsakas av ett virus som sprids via fästingar. Många som smittas får milda symtom och återhämtar sig snabbt, men en del kan utveckla en allvarlig inflammation i hjärnan eller hjärnhinnorna.",
@@ -1083,7 +926,7 @@
   {
     "slug": "skoldkorteln",
     "url": "https://www.1177.se/sjukdomar--besvar/hormoner/skoldkorteln/",
-    "title": "Sköldkörteln",
+    "title": "Sköldkörtelsjukdom",
     "category": "hormoner",
     "subcategory": "skoldkorteln",
     "description": "Sköldkörteln reglerar kroppens ämnesomsättning och kan drabbas av olika sjukdomar. Hypertyreos innebär en överproduktion av hormoner vilket kan leda till symtom som svettning och viktminskning, medan hypotyreos beror på en underproduktion och kan ge trötthet och nedstämdhet. Sköldkörtelinflammation och struma är också möjliga tillstånd som kan påverka hälsan.",
@@ -1115,7 +958,7 @@
   {
     "slug": "infektion-och-inflammation",
     "url": "https://www.1177.se/sjukdomar--besvar/infektioner/infektion-och-inflammation/",
-    "title": "Infektion och inflammation",
+    "title": "Infektionssjukdomar",
     "category": "infektioner",
     "subcategory": "infektion-och-inflammation",
     "description": "En infektion uppstår när virus, bakterier, svampar eller andra smittämnen börjar föröka sig i kroppen. Kroppen reagerar ofta med en inflammation för att bekämpa dessa skadliga ämnen och skydda sig själv.",
@@ -1241,7 +1084,7 @@
   {
     "slug": "konssjukdomar",
     "url": "https://www.1177.se/sjukdomar--besvar/konsorgan/konssjukdomar/",
-    "title": "Könssjukdomar och sexuellt överförbara infektioner",
+    "title": "Könssjukdomar (STI)",
     "category": "konsorgan",
     "subcategory": "konssjukdomar",
     "description": "Könssjukdomar är infektioner som sprids genom sexuell kontakt. Det är viktigt att testa sig om man har haft oskyddat sex, då vissa av dessa sjukdomar kan orsaka allvarliga hälsoproblem. Användning av kondom kan hjälpa till att skydda mot smittspridning.",
@@ -1306,7 +1149,7 @@
   {
     "slug": "prostata",
     "url": "https://www.1177.se/sjukdomar--besvar/konsorgan/prostata/",
-    "title": "Prostata",
+    "title": "Prostatabesvär",
     "category": "konsorgan",
     "subcategory": "prostata",
     "description": "Prostatakörteln är en del av det manliga könsorganet och kan drabbas av olika besvär, inklusive akut bakteriell prostatit. Vid denna åkomma kan man snabbt utveckla sjukdomskänsla och få problem med att kissa. Även åldrande kan leda till en förstorad prostata som kan trycka på urinröret och orsaka svårigheter vid urinering.",
@@ -1338,7 +1181,7 @@
   {
     "slug": "pung-och-testiklar",
     "url": "https://www.1177.se/sjukdomar--besvar/konsorgan/pung-och-testiklar/",
-    "title": "Pung och testiklar",
+    "title": "Testikelproblem",
     "category": "konsorgan",
     "subcategory": "pung-och-testiklar",
     "description": "Besvär i pung och testiklar kan orsaka smärta och svullnad, vilket ibland kräver snabb medicinsk vård. Att få hjälp i tid är viktigt för att förhindra allvarliga komplikationer. Hos barn kan det hända att testiklarna inte sjunker ner i pungen vid födseln, vilket också kan kräva uppföljning.",
@@ -1460,7 +1303,7 @@
   {
     "slug": "bartolinit--infektion-i-slidoppningen",
     "url": "https://www.1177.se/sjukdomar--besvar/konsorgan/klada-och-smarta-i-underlivet/bartolinit--infektion-i-slidoppningen/",
-    "title": "Bartolinit – infektion i slidöppningen",
+    "title": "Bartolinit",
     "category": "konsorgan",
     "subcategory": "klada-och-smarta-i-underlivet",
     "description": "Bartolinit är en infektion i en körtel vid slidöppningen, vilket leder till att området blir svullet och ömt. Ibland läker tillståndet av sig självt, men det krävs ofta medicinsk behandling för att lindra symptomen.",
@@ -1490,7 +1333,7 @@
   {
     "slug": "ont-i-slidoppningen",
     "url": "https://www.1177.se/sjukdomar--besvar/konsorgan/klada-och-smarta-i-underlivet/ont-i-slidoppningen/",
-    "title": "Provocerad vulvodyni – ont i slidöppningen",
+    "title": "Vulvodyni",
     "category": "konsorgan",
     "subcategory": "klada-och-smarta-i-underlivet",
     "description": "Provocerad vulvodyni är en smärtsam tillstånd som uppstår vid slidöppningen, ofta orsakat av överkänslighet i de ytliga nerverna i slemhinnan. Smärtan kan bli mer påtaglig vid samlag eller när något förs in i vaginan.",
@@ -1580,7 +1423,7 @@
   {
     "slug": "bakteriell-vaginos--illaluktande-flytning-fran-slidan",
     "url": "https://www.1177.se/sjukdomar--besvar/konsorgan/mens-blodningar-och-flytningar/bakteriell-vaginos--illaluktande-flytning-fran-slidan/",
-    "title": "Bakteriell vaginos – illaluktande flytning från slidan",
+    "title": "Bakteriell vaginos",
     "category": "konsorgan",
     "subcategory": "mens-blodningar-och-flytningar",
     "description": "Bakteriell vaginos orsakas av en obalans i bakterierna i slidan och leder ofta till illaluktande flytningar. Det är en vanlig åkomma som kan förekomma utan tydliga symtom, men flytningarna kan vara tunna och har ofta en grön eller gul nyans. Ibland kan det också uppstå klåda och sveda i området runt slidmynningen.",
@@ -1674,7 +1517,7 @@
   {
     "slug": "inflammation-och-infektion-ilungor-och-luftror",
     "url": "https://www.1177.se/sjukdomar--besvar/lungor-och-luftvagar/inflammation-och-infektion-ilungor-och-luftror/",
-    "title": "Inflammation och infektion i lungor och luftrör",
+    "title": "Lunginfektioner",
     "category": "lungor-och-luftvagar",
     "subcategory": "inflammation-och-infektion-ilungor-och-luftror",
     "description": "Inflammationer och infektioner i lungorna och luftrören kan orsakas av både virus och bakterier. Vanliga tillstånd inkluderar luftrörskatarr, lunginflammation och infektioner som RS-virus. Behandlingen varierar beroende på orsaken, och vissa tillstånd kan kräva sjukhusvård.",
@@ -1861,7 +1704,7 @@
   {
     "slug": "mun-lappar-och-tunga",
     "url": "https://www.1177.se/sjukdomar--besvar/mun-och-tander/mun-lappar-och-tunga/",
-    "title": "Mun, läppar och tunga",
+    "title": "Munbesvär",
     "category": "mun-och-tander",
     "subcategory": "mun-lappar-och-tunga",
     "description": "Blåsor och sår i munnen är vanliga problem som kan bero på olika orsaker, inklusive infektioner eller skador. Muntorrhet ökar risken för dessa besvär då det resulterar i för lite saliv, vilket är nödvändigt för att tugga och svälja. Herpesvirus kan också orsaka munsår som kan återkomma.",
@@ -1894,7 +1737,7 @@
   {
     "slug": "tander",
     "url": "https://www.1177.se/sjukdomar--besvar/mun-och-tander/tander/",
-    "title": "Tänder",
+    "title": "Tandbesvär",
     "category": "mun-och-tander",
     "subcategory": "tander",
     "description": "Tänder kan påverkas av olika åkommor som tandsten, karies och tandlossning. Regelbunden tandvård och god munhygien kan hjälpa till att förebygga dessa problem. Det är viktigt att söka vård om man har tandvärk eller känsliga tänder.",
@@ -1927,7 +1770,7 @@
   {
     "slug": "munsar--herpes-runt-munnen",
     "url": "https://www.1177.se/sjukdomar--besvar/mun-och-tander/mun-lappar-och-tunga/munsar--herpes-runt-munnen/",
-    "title": "Munsår – herpes runt munnen",
+    "title": "Munsår (herpes)",
     "category": "mun-och-tander",
     "subcategory": "mun-lappar-och-tunga",
     "description": "Munsår orsakade av herpes är ett vanligt problem som många människor drabbas av. Viruset kan ligga kvar i kroppen och orsaka återkommande munsår. När blåsor uppstår runt munnen är det viktigt att undvika närhet som kyssar för att förhindra smittspridning.",
@@ -2312,7 +2155,7 @@
   {
     "slug": "infektioner-i-skelett-leder-och-muskler",
     "url": "https://www.1177.se/sjukdomar--besvar/skelett-leder-och-muskler/infektioner-i-skelett-leder-och-muskler/",
-    "title": "Infektioner i skelett, leder och muskler",
+    "title": "Infektioner i skelett och leder",
     "category": "skelett-leder-och-muskler",
     "subcategory": "infektioner-i-skelett-leder-och-muskler",
     "description": "Infektioner i skelett, leder och muskler uppstår när bakterier angriper kroppens skelett, oftast i armar eller ben. Dessa infektioner kan orsaka obehag men går vanligtvis att behandla framgångsrikt.",
@@ -2344,7 +2187,7 @@
   {
     "slug": "muskler",
     "url": "https://www.1177.se/sjukdomar--besvar/skelett-leder-och-muskler/muskler/",
-    "title": "Muskler",
+    "title": "Muskelbesvär",
     "category": "skelett-leder-och-muskler",
     "subcategory": "muskler",
     "description": "Musklerna är viktiga för vår rörelse och stöder skelettet, samtidigt som de skyddar våra organ. När musklerna överansträngs kan man uppleva smärta och stelhet, särskilt vid skador eller upprepade rörelser. Vanliga tillstånd som påverkar musklerna inkluderar träningsvärk, muskelkramp och muskelreumatism.",
@@ -2378,7 +2221,7 @@
   {
     "slug": "rygg-och-nacke",
     "url": "https://www.1177.se/sjukdomar--besvar/skelett-leder-och-muskler/rygg-och-nacke/",
-    "title": "Rygg och nacke",
+    "title": "Rygg- och nackbesvär",
     "category": "skelett-leder-och-muskler",
     "subcategory": "rygg-och-nacke",
     "description": "Rygg- och nackbesvär är vanligt och kan orsakas av olika faktorer, inklusive muskelspänningar, diskbråck och nackspärr. Även barn kan drabbas av ryggont, speciellt under puberteten när de växer snabbt. Ofta går besvären över av sig själv, men ibland kan det behövas behandling.",
@@ -2412,7 +2255,7 @@
   {
     "slug": "benskorhet---osteoporos",
     "url": "https://www.1177.se/sjukdomar--besvar/skelett-leder-och-muskler/benskorhet---osteoporos/",
-    "title": "Benskörhet - osteoporos",
+    "title": "Benskörhet (osteoporos)",
     "category": "skelett-leder-och-muskler",
     "subcategory": "benskorhet---osteoporos",
     "description": "Benskörhet, eller osteoporos, innebär att skelettet blir mer skört och därmed ökar risken för benbrott. Vanligen sker dessa brott i handleder, höfter, ryggkotor eller överarmar, ofta utan föregående symtom. Många gånger upptäcks benskörhet först när ett ben brutits.",
@@ -2596,7 +2439,7 @@
   {
     "slug": "bakercysta--svullnad-i-knavecket",
     "url": "https://www.1177.se/sjukdomar--besvar/skelett-leder-och-muskler/leder/bakercysta--svullnad-i-knavecket/",
-    "title": "Bakercysta – svullnad i knävecket",
+    "title": "Bakercysta",
     "category": "skelett-leder-och-muskler",
     "subcategory": "leder",
     "description": "En Bakercysta är en svullnad som uppstår i knävecket när slemsäcken på knäts baksida innehåller för mycket vätska. Denna svullnad är oftast inte smärtsam, men kan kännas spänd om den blir stor. I sällsynta fall kan cystan spricka, vilket orsakar smärta och blödning i vaden.",
@@ -2628,7 +2471,7 @@
   {
     "slug": "frusen-skuldra---frusen-axel",
     "url": "https://www.1177.se/sjukdomar--besvar/skelett-leder-och-muskler/leder/frusen-skuldra---frusen-axel/",
-    "title": "Frusen skuldra - frusen axel",
+    "title": "Frusen skuldra",
     "category": "skelett-leder-och-muskler",
     "subcategory": "leder",
     "description": "Frusen skuldra, eller frusen axel, är en åkomma som orsakar smärta och stelhet i axeln. Efter en tid kan rörligheten bli kraftigt nedsatt, vilket gör det svårt att utföra vardagliga aktiviteter som att kamma håret eller borsta tänderna.",
@@ -2724,7 +2567,7 @@
   {
     "slug": "ledgangsreumatism---ra",
     "url": "https://www.1177.se/sjukdomar--besvar/skelett-leder-och-muskler/leder/ledgangsreumatism---ra/",
-    "title": "Reumatoid artrit – ledgångsreumatism",
+    "title": "Ledgångsreumatism (RA)",
     "category": "skelett-leder-och-muskler",
     "subcategory": "leder",
     "description": "Reumatoid artrit, även känd som ledgångsreumatism, är en kronisk inflammatorisk sjukdom som vanligtvis börjar i små leder, såsom i händer och fötter. Den kännetecknas av svullna och ömma leder som orsakar smärta och stelhet, särskilt efter längre perioder av inaktivitet.",
@@ -2789,7 +2632,7 @@
   {
     "slug": "muskelkramp---sendrag",
     "url": "https://www.1177.se/sjukdomar--besvar/skelett-leder-och-muskler/muskler/muskelkramp---sendrag/",
-    "title": "Muskelkramp - sendrag",
+    "title": "Muskelkramp",
     "category": "skelett-leder-och-muskler",
     "subcategory": "muskler",
     "description": "Muskelkramp är en plötslig och smärtsam sammandragning av en muskel, vanligen i vaden eller foten, vilket även kallas sendrag. Det kan inträffa när muskeln är överansträngd eller vid länge stillasittande, och drabbar människor i alla åldrar.",
@@ -2851,7 +2694,7 @@
   {
     "slug": "nasa-och-luktsinne",
     "url": "https://www.1177.se/sjukdomar--besvar/oron-nasa-och-hals/nasa-och-luktsinne/",
-    "title": "Näsa och luktsinne",
+    "title": "Näsbesvär",
     "category": "oron-nasa-och-hals",
     "subcategory": "nasa-och-luktsinne",
     "description": "Besvär i näsan och med luktsinnet är vanliga och kan orsakas av allt från förkylningar till allergier och torra slemhinnor. Rinnsnuva, nästäppa och nedsatt luktsinne är typiska symptom. Ibland kan också näspolyper eller näsblod förekomma.",
@@ -2914,7 +2757,7 @@
   {
     "slug": "svart-att-svalja--dysfagi",
     "url": "https://www.1177.se/sjukdomar--besvar/oron-nasa-och-hals/hals/svart-att-svalja--dysfagi/",
-    "title": "Svårt att svälja – dysfagi",
+    "title": "Dysfagi (sväljsvårigheter)",
     "category": "oron-nasa-och-hals",
     "subcategory": "hals",
     "description": "Att ha svårt att svälja, även känt som dysfagi, kan orsakas av olika faktorer och kan göra det utmanande att få i sig tillräckligt med näring. Det är viktigt att söka vård om man upplever dessa besvär för att få den hjälp man behöver.",
@@ -2945,41 +2788,9 @@
     "enrichedAt": "2026-03-23T10:54:32.123Z"
   },
   {
-    "slug": "rostbehandling",
-    "url": "https://www.1177.se/sjukdomar--besvar/oron-nasa-och-hals/rost-och-tal/rostbehandling/",
-    "title": "Röstbehandling",
-    "category": "oron-nasa-och-hals",
-    "subcategory": "rost-och-tal",
-    "description": "Om du har problem med din röst kan du få behandling om det behövs. Behandlingen sker vanligtvis hos en logoped, som hjälper dig med olika övningar för din röst och andning.",
-    "symptoms": [
-      "heshet",
-      "svårt att tala",
-      "smärta vid tal",
-      "andas knaggligt"
-    ],
-    "treatments": [
-      "Logopedisk behandling",
-      "Röstövningar",
-      "Gruppträning",
-      "Användning av hjälpmedel"
-    ],
-    "whenToSeekCare": "Sök vård om du har ihållande problem med rösten.",
-    "specialties": [
-      "ÖNH-specialist",
-      "Audiologi",
-      "Fysioterapi"
-    ],
-    "ingress": "Du som har besv&#228;r med r&#246;sten kan f&#229; behandling om det beh&#246;vs. Oftast g&#246;rs behandlingen hos en logoped.",
-    "source": "1177.se",
-    "sourceUrl": "https://www.1177.se/sjukdomar--besvar/oron-nasa-och-hals/rost-och-tal/rostbehandling/",
-    "authors": [],
-    "lastModified": "2024-12-17T00:00:00+01:00",
-    "enrichedAt": "2026-03-23T10:54:35.980Z"
-  },
-  {
     "slug": "dysartri--svart-att-prata",
     "url": "https://www.1177.se/sjukdomar--besvar/oron-nasa-och-hals/rost-och-tal/dysartri--svart-att-prata/",
-    "title": "Dysartri – svårt att prata",
+    "title": "Dysartri (talsvårigheter)",
     "category": "oron-nasa-och-hals",
     "subcategory": "rost-och-tal",
     "description": "Dysartri innebär att en person har svårt att tala på grund av skador på nerver eller hjärnan. Det kan vara ansträngande att prata och omgivningen kan ha svårt att förstå vad som sägs. Det finns dock hjälpmedel och behandlingsalternativ som kan förbättra kommunikationen.",
@@ -3197,36 +3008,6 @@
     "authors": [],
     "lastModified": "2023-01-27T00:00:00+01:00",
     "enrichedAt": "2026-03-23T10:55:10.133Z"
-  },
-  {
-    "slug": "rensa-nasan-med-koksalt",
-    "url": "https://www.1177.se/sjukdomar--besvar/oron-nasa-och-hals/nasa-och-luktsinne/rensa-nasan-med-koksalt/",
-    "title": "Skölj näsan med koksalt - nässköljning",
-    "category": "oron-nasa-och-hals",
-    "subcategory": "nasa-och-luktsinne",
-    "description": "Nässköljning är en effektiv metod för att lindra besvär som nästäppa och snuva. Genom att använda en saltlösning kan du rengöra näsgångarna och motverka irritation. Det är enkelt att göra själv hemma med hjälp av vatten och salt.",
-    "symptoms": [
-      "nässlefungeringsproblem",
-      "täppt näsa",
-      "rinning från näsan"
-    ],
-    "treatments": [
-      "Nässköljning med koksalt",
-      "Dampad inandning",
-      "Läkemedelsbehandling"
-    ],
-    "whenToSeekCare": "Sök vård om besvären är långvariga eller förvärras.",
-    "specialties": [
-      "ÖNH-specialist",
-      "Allmänmedicin",
-      "Audiologi"
-    ],
-    "ingress": "H&#228;r finns en intruktionsfilm p&#229; hur du p&#229; ett enkelt s&#228;tt kan sk&#246;lja din n&#228;sa f&#246;r att lindra dina besv&#228;r vid n&#228;st&#228;ppa och snuva.",
-    "source": "1177.se",
-    "sourceUrl": "https://www.1177.se/sjukdomar--besvar/oron-nasa-och-hals/nasa-och-luktsinne/rensa-nasan-med-koksalt/",
-    "authors": [],
-    "lastModified": null,
-    "enrichedAt": "2026-03-23T10:55:13.462Z"
   },
   {
     "slug": "ont-i-orat",
