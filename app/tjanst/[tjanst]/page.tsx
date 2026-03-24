@@ -14,7 +14,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 
 interface Props {
-  params: { tjanst: string }
+  params: Promise<{ tjanst: string }>
 }
 
 export async function generateStaticParams() {
@@ -23,7 +23,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const service = await getServiceBySlug(params.tjanst)
+  const { tjanst } = await params
+  const service = await getServiceBySlug(tjanst)
   if (!service) return { title: 'Tjänst hittades inte' }
   return {
     title: `${service.name} – Hitta specialister`,
@@ -36,9 +37,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function TjanstDetailPage({ params }: Props) {
+  const { tjanst } = await params
   const [service, professionals, cities] = await Promise.all([
-    getServiceBySlug(params.tjanst),
-    getProfessionalsByService(params.tjanst),
+    getServiceBySlug(tjanst),
+    getProfessionalsByService(tjanst),
     getAllCities(),
   ])
 

@@ -14,16 +14,17 @@ import { MapView } from '@/components/map-view'
 import { JsonLd } from '@/components/json-ld'
 
 interface Props {
-  params: { tillstand: string; stad: string }
+  params: Promise<{ tillstand: string; stad: string }>
 }
 
 // Render on demand — too many combos to pre-render (conditions × cities)
 export const dynamic = 'force-dynamic'
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { tillstand, stad } = await params
   const [condition, city] = await Promise.all([
-    getConditionBySlug(params.tillstand),
-    getCityBySlug(params.stad),
+    getConditionBySlug(tillstand),
+    getCityBySlug(stad),
   ])
   if (!condition || !city) return { title: 'Sidan hittades inte' }
   return {
@@ -37,10 +38,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function TillstandStadPage({ params }: Props) {
+  const { tillstand, stad } = await params
   const [condition, city, professionals] = await Promise.all([
-    getConditionBySlug(params.tillstand),
-    getCityBySlug(params.stad),
-    getProfessionalsByCityAndCondition(params.stad, params.tillstand),
+    getConditionBySlug(tillstand),
+    getCityBySlug(stad),
+    getProfessionalsByCityAndCondition(stad, tillstand),
   ])
 
   if (!condition || !city) notFound()

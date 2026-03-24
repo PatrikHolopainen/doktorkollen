@@ -19,7 +19,7 @@ import { MapView } from '@/components/map-view'
 import { JsonLd } from '@/components/json-ld'
 
 interface Props {
-  params: { vardgivare: string }
+  params: Promise<{ vardgivare: string }>
 }
 
 function getInitials(name: string): string {
@@ -37,7 +37,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const professional = await getProfessionalBySlug(params.vardgivare)
+  const { vardgivare } = await params
+  const professional = await getProfessionalBySlug(vardgivare)
   if (!professional) return { title: 'Vårdgivare hittades inte' }
   return {
     title: `${professional.name} – ${professional.title} i ${professional.city}`,
@@ -50,7 +51,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function VardgivareProfilePage({ params }: Props) {
-  const professional = await getProfessionalBySlug(params.vardgivare)
+  const { vardgivare } = await params
+  const professional = await getProfessionalBySlug(vardgivare)
   if (!professional) notFound()
 
   const [related, clinics, allConditions] = await Promise.all([

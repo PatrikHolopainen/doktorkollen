@@ -15,7 +15,7 @@ import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 
 interface Props {
-  params: { klinik: string }
+  params: Promise<{ klinik: string }>
 }
 
 export async function generateStaticParams() {
@@ -28,7 +28,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const clinic = await getClinicBySlug(params.klinik)
+  const { klinik } = await params
+  const clinic = await getClinicBySlug(klinik)
   if (!clinic) return { title: 'Klinik hittades inte' }
   return {
     title: `${clinic.name} – ${clinic.city}`,
@@ -41,7 +42,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function KlinikProfilePage({ params }: Props) {
-  const clinic = await getClinicBySlug(params.klinik)
+  const { klinik } = await params
+  const clinic = await getClinicBySlug(klinik)
   if (!clinic) notFound()
 
   const professionals = await getProfessionalsForClinic(clinic)

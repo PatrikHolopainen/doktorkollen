@@ -13,7 +13,7 @@ import { JsonLd } from '@/components/json-ld'
 import { Badge } from '@/components/ui/badge'
 
 interface Props {
-  params: { tillstand: string }
+  params: Promise<{ tillstand: string }>
 }
 
 export async function generateStaticParams() {
@@ -22,7 +22,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const condition = await getConditionBySlug(params.tillstand)
+  const { tillstand } = await params
+  const condition = await getConditionBySlug(tillstand)
   if (!condition) return { title: 'Tillstånd hittades inte' }
   return {
     title: `${condition.name} – Symptom, behandling och specialister`,
@@ -35,9 +36,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function TillstandDetailPage({ params }: Props) {
+  const { tillstand } = await params
   const [condition, professionals, cities] = await Promise.all([
-    getConditionBySlug(params.tillstand),
-    getProfessionalsByCondition(params.tillstand),
+    getConditionBySlug(tillstand),
+    getProfessionalsByCondition(tillstand),
     getAllCities(),
   ])
 
