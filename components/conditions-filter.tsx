@@ -9,8 +9,11 @@ interface ConditionsFilterProps {
   conditions: Condition[]
 }
 
+const PAGE_SIZE = 50
+
 export function ConditionsFilter({ conditions }: ConditionsFilterProps) {
   const [query, setQuery] = React.useState('')
+  const [visibleCount, setVisibleCount] = React.useState(PAGE_SIZE)
 
   const filtered = query
     ? conditions.filter(
@@ -20,6 +23,10 @@ export function ConditionsFilter({ conditions }: ConditionsFilterProps) {
           c.symptoms.some((s) => s.toLowerCase().includes(query.toLowerCase()))
       )
     : conditions
+
+  React.useEffect(() => { setVisibleCount(PAGE_SIZE) }, [query])
+
+  const visible = filtered.slice(0, visibleCount)
 
   return (
     <div>
@@ -36,11 +43,23 @@ export function ConditionsFilter({ conditions }: ConditionsFilterProps) {
           <p className="text-muted-foreground">Inga tillstånd hittades för &ldquo;{query}&rdquo;.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {filtered.map((condition) => (
-            <ConditionCard key={condition.id} condition={condition} />
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            {visible.map((condition) => (
+              <ConditionCard key={condition.id} condition={condition} />
+            ))}
+          </div>
+          {visibleCount < filtered.length && (
+            <div className="mt-10 text-center">
+              <button
+                onClick={() => setVisibleCount((n) => n + PAGE_SIZE)}
+                className="px-6 py-2.5 rounded-md border border-brand text-brand text-sm font-medium hover:bg-brand-light transition-colors"
+              >
+                Visa fler ({filtered.length - visibleCount} kvar)
+              </button>
+            </div>
+          )}
+        </>
       )}
     </div>
   )

@@ -13,9 +13,12 @@ interface ProfessionalsFilterProps {
   cities: City[]
 }
 
+const PAGE_SIZE = 50
+
 export function ProfessionalsFilter({ professionals, cities }: ProfessionalsFilterProps) {
   const [query, setQuery] = React.useState('')
   const [selectedCity, setSelectedCity] = React.useState('')
+  const [visibleCount, setVisibleCount] = React.useState(PAGE_SIZE)
 
   const filtered = professionals.filter((p) => {
     const matchesQuery =
@@ -26,6 +29,10 @@ export function ProfessionalsFilter({ professionals, cities }: ProfessionalsFilt
     const matchesCity = !selectedCity || p.citySlug === selectedCity
     return matchesQuery && matchesCity
   })
+
+  React.useEffect(() => { setVisibleCount(PAGE_SIZE) }, [query, selectedCity])
+
+  const visible = filtered.slice(0, visibleCount)
 
   const markers: MapMarker[] = filtered
     .filter((p) => p.lat !== 0 && p.lng !== 0)
@@ -85,11 +92,23 @@ export function ProfessionalsFilter({ professionals, cities }: ProfessionalsFilt
               <p className="text-muted-foreground">Inga vårdgivare hittades med dessa filter.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {filtered.map((pro) => (
-                <ProfessionalCard key={pro.id} professional={pro} />
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {visible.map((pro) => (
+                  <ProfessionalCard key={pro.id} professional={pro} />
+                ))}
+              </div>
+              {visibleCount < filtered.length && (
+                <div className="mt-10 text-center">
+                  <button
+                    onClick={() => setVisibleCount((n) => n + PAGE_SIZE)}
+                    className="px-6 py-2.5 rounded-md border border-brand text-brand text-sm font-medium hover:bg-brand-light transition-colors"
+                  >
+                    Visa fler ({filtered.length - visibleCount} kvar)
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </TabsContent>
 
